@@ -1,13 +1,14 @@
 package com.personal.base.service.sms.aliyun.model;
 
+import java.util.List;
 import java.util.Map;
 
-public class SendSmsModel {
+public class SendSmsModel<T> {
 
     private String telephone;
     private String code;
     private String templateCode;
-    private String extendCode;
+    private Long extendCode;
     private String outId;
     private Map parameters;
     private String signName;
@@ -36,11 +37,11 @@ public class SendSmsModel {
         this.templateCode = templateCode;
     }
 
-    public String getExtendCode() {
+    public Long getExtendCode() {
         return extendCode;
     }
 
-    public void setExtendCode(String extendCode) {
+    public void setExtendCode(Long extendCode) {
         this.extendCode = extendCode;
     }
 

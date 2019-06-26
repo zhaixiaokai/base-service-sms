@@ -18,5 +18,10 @@
         </property>
         <property name="fileEncoding" value="utf-8"/>
     </bean>
-    <context:component-scan base-package="com.personal.base.service.sms.aliyun.service"/>
+
+    <bean id="accessKey" class="com.personal.base.service.sms.aliyun.conf.AccessKey">
+        <property name="accessKeyId" value="${aliyun.accessKeyId}"/>
+        <property name="accessKeySecret" value="${aliyun.AccessKeySecret}"/>
+    </bean>
+    <context:component-scan base-package="com.personal.base.service.sms.aliyun"/>
 </beans>
